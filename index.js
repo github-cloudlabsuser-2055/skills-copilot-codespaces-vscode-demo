@@ -8,6 +8,17 @@ function reverseSentence(sentence) {
     return reversed;
 }
 
+function extractNames(data) {
+    return data.map(item => item.map(obj => obj.name));
+}
+
+// Example usage
+const data = [
+    [{ name: 'John' }, { name: 'Jane' }],
+    [{ name: 'Bob' }]
+];
+const names = extractNames(data).flat();
+console.log(names); // Output: ['John', 'Jane', 'Bob']
 
 // Example usage
 const input = "hello world from javascript";
